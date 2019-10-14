@@ -6,7 +6,8 @@ import './App.css';
 
 export default class App extends Component {
  state = {
-   joke:'',
+   setup:'',
+   delivery:'',
    url : 'https://sv443.net/jokeapi/category/any?blacklistFlags=nsfwreligiouspolitical'
  }
 
@@ -15,7 +16,9 @@ export default class App extends Component {
    const data = await fetch(this.state.url)
    const jsonData = await data.json()
    this.setState({
-     joke: jsonData.setup
+     setup: jsonData.setup,
+     delivery: jsonData.delivery
+
    })
    }catch(error){
      console.log(error)
@@ -28,7 +31,8 @@ export default class App extends Component {
  }
 
   render() {
-    console.log(this.state.joke)
+    console.log(this.state.setup)
+    console.log(this.state.delivery)
     return (
      
    <h1>Hello form App</h1>
