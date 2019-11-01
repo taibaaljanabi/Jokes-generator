@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import './App.css';
+import jokeCard from './jokeCard'
 
 
 
@@ -29,13 +30,14 @@ export default class App extends Component {
  componentDidMount(){
   this.getJokes()
  }
+ 
 
   render() {
     console.log(this.state.setup)
     console.log(this.state.delivery)
     return (
      
-   <h1>Hello form App</h1>
+   <jokeCard/>
     );
   }
 }
