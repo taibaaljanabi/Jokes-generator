@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import './App.css';
-import jokeCard from './jokeCard'
+import JokeCard from './JokeCard'
 
 
 
@@ -30,14 +30,14 @@ export default class App extends Component {
  componentDidMount(){
   this.getJokes()
  }
- 
+
 
   render() {
-    console.log(this.state.setup)
-    console.log(this.state.delivery)
+    // console.log(this.state.setup)
+    // console.log(this.state.delivery)
     return (
      
-   <jokeCard/>
+   <JokeCard setup={this.state.setup} delivery={this.state.delivery}/>
     );
   }
 }
